@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz@1,9..144&family=Lato&family=Montserrat&family=Open+Sans:wght@400;800&family=Oswald&family=Poppins:wght@400;600&family=Roboto&display=swap");
+
+:root {
+  --Softblue: hsl(215, 35%, 57%);
+  --Cyan: hsl(178, 100%, 50%, 0.9);
+  --Verydarkblue: hsl(217, 54%, 11%); /*(main BG)*/
+  --Mediumdarkblue: hsl(216, 50%, 16%); /*(card BG)*/
+  -verydarkblue: hsl(215, 32%, 27%); /*(line)*/
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Verydarkblue);
+}
+
+.container {
+  width: 350px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(219, 48%, 11%);
+  border-radius: 1em;
+}
+
+.nft_card {
+  width: 320px;
+  margin: auto;
+  background-color: var(--Mediumdarkblue);
+  padding: 1.2em;
+  border-radius: 0.7em;
+  position: relative;
+  top: 30px;
+}
+
+.nft_card .eth_img {
+  width: 100%;
+  height: 250px;
+  background: url(images/image-equilibrium.jpg);
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  position: relative;
+  border-radius: 0.4em;
+}
+
+.overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay {
+  height: 250px;
+  opacity: 0;
+  border-radius: 0.4em;
+  transition: opacity 0.3s ease-in;
+}
+
+.nft_card .eth_img:hover .overlay {
+  opacity: 1;
+  background: hsl(178, 100%, 50%, 0.3);
+}
+
+.text_box {
+  padding: 1em 0;
+}
+
+.text_box h2 {
+  font-family: "poppins";
+  font-size: 1.2rem;
+  color: white;
+}
+
+.text_box h2:hover {
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.text_box p {
+  font-family: "lato";
+  font-size: 1.02rem;
+  color: var(--Softblue);
+  padding: 1em 0;
+}
+
+.text_box .eth_info {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text_box .eth_info h3:before {
+  content: url(images/icon-ethereum.svg);
+  position: relative;
+  right: 5px;
+  top: 3px;
+}
+
+.text_box .eth_info h3 {
+  font-family: "poppins";
+  font-size: 0.9rem;
+  color: var(--Cyan);
+  margin-left: 10px;
+}
+
+.text_box .eth_info p {
+  font-size: 0.8em;
+  font-family: "poppins";
+}
+
+.text_box .eth_info p:before {
+  content: url(images/icon-clock.svg);
+  position: relative;
+  right: 5px;
+  top: 2px;
+}
+
+.nft_card .line {
+  height: 0.01em;
+  margin: 0 auto 1em;
+  background-color: var(--Softblue);
+  border-radius: 1px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.nft_card .avatar_info {
+  display: flex;
+  align-items: center;
+}
+
+.nft_card .avatar {
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.nft_card .avatar_info p {
+  color: var(--Softblue);
+  font-family: "poppins";
+  font-size: 0.8em;
+  margin-left: 15px;
+}
+.nft_card .avatar_info a {
+  color: white;
+}
+
+.nft_card .avatar_info a:hover {
+  color: var(--Cyan);
+}
