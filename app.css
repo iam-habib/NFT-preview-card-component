@@ -161,7 +161,11 @@ body {
 }
 
 @media screen and (min-width: 50px) and (max-width: 350px) {
-  html {
-    font-size: 14px;
-  }
+ .container {
+  width: 90%;
+}
+
+.nft_card {
+  width: 100%;
+}
 }
