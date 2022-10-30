@@ -159,3 +159,9 @@ body {
 .nft_card .avatar_info a:hover {
   color: var(--Cyan);
 }
+
+@media screen and (min-width: 50px) and (max-width: 350px) {
+  html {
+    font-size: 14px;
+  }
+}
